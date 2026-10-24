@@ -424,6 +424,9 @@
     opacity: 0.7;
   }
 
+  .exp-summary { font-size: 0.9rem; color: rgba(245,242,237,0.85); line-height: 1.7; max-width: 820px; }
+  .exp-summary strong { color: var(--accent); font-weight: 500; }
+  @media (max-width: 768px) { .exp-summary { font-size: 0.84rem; } }
   .exp-bullets {
     list-style: none;
     display: flex;
@@ -1342,13 +1345,7 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Ludwigsburg, Germany</span>
           </div>
-          <ul class="exp-bullets">
-            <li>Implemented and evaluated anomaly detection models (PCA, FFT, vibration analysis) on multivariate sensor data using scikit-learn</li>
-            <li>Developed and deployed a computer vision pipeline (RT-DETR) for real-time conveyor belt intrusion detection, achieving <strong style="color:var(--accent)">91% precision</strong> in production</li>
-            <li>Engineered a cloud-agnostic Connect Layer for edge-device discovery, onboarding and telemetry across AWS IoT and Azure IoT Hub (Python, FastAPI, MQTT, Terraform)</li>
-            <li>Independently designed and built a tool for secure remote management of industrial PCs (IPCs) using Tailscale, giving engineers safe remote access to machines on site without changes to existing networks</li>
-            <li>Trained and evaluated predictive maintenance and fault detection models using PyTorch and MLflow, tracking <strong style="color:var(--accent)">12+ experiments</strong></li>
-          </ul>
+          <p class="exp-summary">Builds production AI for Bosch's digital-twin platform: a GPU-accelerated RT-DETR computer vision pipeline for conveyor-belt intrusion detection (<strong>91% precision in production</strong>), anomaly detection and predictive-maintenance models on sensor data (PyTorch, scikit-learn, MLflow), and a cloud-agnostic edge-to-cloud Connect Layer for AWS IoT and Azure IoT Hub (Python, FastAPI, MQTT, Terraform). Also independently built a tool for secure remote management of industrial PCs using Tailscale.</p>
         </div>
       </div>
 
@@ -1364,13 +1361,7 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Aachen, Germany</span>
           </div>
-          <ul class="exp-bullets">
-            <li>Architected an agentic AI system (LangGraph) grounding LLM reasoning in enterprise knowledge categories; designed guardrails preventing unsupported claims, validated via an ablation study with inter-rater reliability</li>
-            <li>Implemented a RAG pipeline with tool-calling agents via MCP and hybrid retrieval (ChromaDB, Neo4j, SQLite), improving relevance by <strong style="color:var(--accent)">40%</strong></li>
-            <li>Designed an evaluation framework quantifying latency, cost and output quality of AI-agent process analysis</li>
-            <li>Built <strong style="color:var(--accent)">Shape</strong>, an enterprise OCEL platform: full-stack backend (FastAPI, Docker) and interactive process dashboards (React, Cytoscape.js), improving data compliance and pipeline execution speed</li>
-            <li>Optimized the API with Redis caching, reducing latency by <strong style="color:var(--accent)">80%</strong> for high-frequency queries</li>
-          </ul>
+          <p class="exp-summary">Designed and built an agentic AI decision-support system (LangGraph, MCP) that grounds LLM reasoning in enterprise knowledge, with guardrails against unsupported claims, hybrid RAG retrieval (<strong>40% better relevance</strong>) and an evaluation framework for quality, latency and cost, validated by an ablation study with inter-rater reliability. Also built Shape, an enterprise OCEL process-mining platform (FastAPI, Docker, React), where Redis caching cut API latency by <strong>80%</strong>.</p>
         </div>
       </div>
 
@@ -1386,12 +1377,7 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Oberkochen, Germany</span>
           </div>
-          <ul class="exp-bullets">
-            <li>Led end-to-end migration of legacy SSRS/Power BI reports to Databricks, improving scalability, data governance, and reducing refresh time by <strong style="color:var(--accent)">40%</strong></li>
-            <li>Rebuilt and optimized ETL pipelines and <strong style="color:var(--accent)">5 KPI dashboards</strong> for production monitoring using SAP scheduling data</li>
-            <li>Wrote a Python-based scheduling algorithm for production levelling under capacity constraints, reducing manual planning effort by <strong style="color:var(--accent)">~25%</strong></li>
-            <li>Developed an LLM-driven conversational analytics agent (RAG, NL-to-SQL) for KPI exploration and production planning</li>
-          </ul>
+          <p class="exp-summary">Modernized production reporting by migrating legacy SSRS/Power BI reports to Databricks (<strong>40% faster refresh</strong>) and rebuilding ETL pipelines and KPI dashboards on SAP scheduling data. Wrote a Python scheduling algorithm for production levelling (~25% less planning effort) and an LLM-based conversational analytics agent (RAG, NL-to-SQL).</p>
         </div>
       </div>
 
@@ -1407,10 +1393,7 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Düsseldorf, Germany</span>
           </div>
-          <ul class="exp-bullets">
-            <li>Optimized ETL pipelines for multiple clients, achieving a <strong style="color:var(--accent)">30% boost</strong> in data processing efficiency</li>
-            <li>Designed Power BI dashboards with Row-Level Security for client-specific consulting analytics projects</li>
-          </ul>
+          <p class="exp-summary">Optimized client ETL pipelines (<strong>30% faster processing</strong>) and built Power BI dashboards with row-level security for client-specific consulting analytics.</p>
         </div>
       </div>
 
@@ -1426,10 +1409,7 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Gurugram, India · US Client</span>
           </div>
-          <ul class="exp-bullets">
-            <li>Analyzed US credit datasets using PEGA Customer Decision Hub to support data-driven decision strategies for debt recovery operations</li>
-            <li>Validated backend marketing strategies through test-log analysis, supporting campaign optimization and performance evaluation</li>
-          </ul>
+          <p class="exp-summary">Analyzed US credit datasets in Pega Customer Decision Hub to shape data-driven decision strategies for debt recovery, and validated marketing strategies through test-log analysis.</p>
         </div>
       </div>
 
@@ -1445,13 +1425,7 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Pune, India · US Clients</span>
           </div>
-          <ul class="exp-bullets">
-            <li>Implemented and deployed machine learning models for fraud detection and risk assessment, improving predictive performance and supporting business decision-making</li>
-            <li>Built and maintained ETL pipelines, reducing data processing time by <strong style="color:var(--accent)">30%</strong></li>
-            <li>Delivered real-time Power BI dashboards tracking <strong style="color:var(--accent)">15+ KPIs</strong> for US stakeholder decision-making</li>
-            <li>Automated data quality testing with Python and Selenium, achieving a <strong style="color:var(--accent)">40% reduction</strong> in manual tasks</li>
-            <li>Streamlined Jenkins CI/CD pipelines and JIRA workflows, cutting release cycle time by <strong style="color:var(--accent)">30%</strong> and deployment failures by <strong style="color:var(--accent)">15%</strong></li>
-          </ul>
+          <p class="exp-summary">Built and deployed ML models for fraud detection and risk assessment, ETL pipelines (<strong>30% faster processing</strong>) and Power BI dashboards tracking 15+ KPIs for US stakeholders. Automated data-quality testing with Python and Selenium (40% less manual work) and streamlined Jenkins CI/CD, cutting release cycles by 30%.</p>
         </div>
       </div>
 
