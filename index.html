@@ -1246,33 +1246,33 @@
   .cursor{background:var(--accent)!important}
   @media (max-width:900px){.themes{margin-left:auto;margin-right:10px}}
   /* ===== Nebula: purple gradient, rounded glass ===== */
-  [data-theme=nebula]{--a-rgb:139,92,246;--a2-rgb:99,102,241;--accent:#a78bfa;--accent2:#c7d2fe;--bg:#080515;--surface:rgba(255,255,255,.035);--surface2:#151030;--border:rgba(167,139,250,.16);--muted:#b4abd0}
-  [data-theme=nebula] body{background:radial-gradient(900px 600px at 85% -5%,rgba(124,58,237,.35),transparent 60%),radial-gradient(800px 600px at -5% 40%,rgba(79,70,229,.22),transparent 60%),radial-gradient(700px 500px at 90% 95%,rgba(168,85,247,.18),transparent 60%),#080515;background-attachment:fixed}
-  [data-theme=nebula] body::before{opacity:.5}
-  [data-theme=nebula] nav{margin:14px 24px 0;left:0;right:0;border:1px solid var(--border);border-radius:999px;background:rgba(20,14,45,.6);padding:10px 24px;backdrop-filter:blur(18px)}
-  [data-theme=nebula] .nav-cta,[data-theme=nebula] .btn-primary,[data-theme=nebula] .btn-secondary,[data-theme=nebula] .pf-chip,[data-theme=nebula] .hero-tag,[data-theme=nebula] .photo-badge,[data-theme=nebula] .pf-search{border-radius:999px}
-  [data-theme=nebula] .btn-primary,[data-theme=nebula] .nav-cta:hover,[data-theme=nebula] .pf-chip.active{background:linear-gradient(135deg,#8b5cf6,#6366f1);color:#fff!important;border-color:transparent;box-shadow:0 8px 28px rgba(124,58,237,.45)}
-  [data-theme=nebula] .btn-primary::before{display:none}
-  [data-theme=nebula] .nav-cta{padding:8px 20px!important}
-  [data-theme=nebula] .nav-links a[data-r]::after{display:none}
-  [data-theme=nebula] .nav-links a.active{color:#fff;background:rgba(139,92,246,.22);padding:6px 14px;border-radius:999px}
-  [data-theme=nebula] .nav-links a[data-r]{padding:6px 14px}
-  [data-theme=nebula] .skill-card,[data-theme=nebula] .project-card,[data-theme=nebula] .service-card,[data-theme=nebula] .tile,[data-theme=nebula] .contact-link,[data-theme=nebula] .oss-feat,[data-theme=nebula] .oss-card,[data-theme=nebula] .pager a,[data-theme=nebula] .about-fact,[data-theme=nebula] .freelance-hero,[data-theme=nebula] .freelance-cta-band,[data-theme=nebula] .pf-empty{border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--border);backdrop-filter:blur(10px)}
-  [data-theme=nebula] .skill-card{overflow:hidden}
-  [data-theme=nebula] .project-card:hover,[data-theme=nebula] .tile:hover,[data-theme=nebula] .skill-card:hover{border-color:rgba(167,139,250,.5);box-shadow:0 14px 40px rgba(88,28,235,.25)}
-  [data-theme=nebula] .exp-logo,[data-theme=nebula] .edu-logo-wrap,[data-theme=nebula] .proj-logo{border-radius:16px}
-  [data-theme=nebula] .skill-tag,[data-theme=nebula] .tech-chip,[data-theme=nebula] .service-tag,[data-theme=nebula] .exp-type{border-radius:999px}
-  [data-theme=nebula] #experience,[data-theme=nebula] #projects,[data-theme=nebula] #contact,[data-theme=nebula] #freelance{background:transparent}
-  [data-theme=nebula] .exp-item:hover,[data-theme=nebula] .edu-item:hover{border-radius:20px;background:rgba(139,92,246,.07)}
-  [data-theme=nebula] .hero-photo-wrap{padding:14px;border-radius:32px;background:linear-gradient(160deg,rgba(139,92,246,.55),rgba(99,102,241,.15) 60%,rgba(255,255,255,.04));border:1px solid rgba(167,139,250,.35);box-shadow:0 30px 80px rgba(88,28,235,.4)}
-  [data-theme=nebula] .hero-photo-wrap::before{display:none}
-  [data-theme=nebula] .hero-photo-wrap img{border-radius:22px;border:none!important}
-  [data-theme=nebula] .photo-badge{color:#fff;background:linear-gradient(135deg,#8b5cf6,#6366f1);right:-10px;bottom:-12px}
-  [data-theme=nebula] h1 span,[data-theme=nebula] .section-title{background:none}
-  [data-theme=nebula] h1 span{background:linear-gradient(120deg,#a78bfa,#818cf8,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
-  [data-theme=nebula] .stat-item{padding:14px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
-  [data-theme=nebula] .hero-stats{gap:14px}
-  [data-theme=nebula] footer{border-top:1px solid var(--border)}
+  [data-theme=nebula]{--on-accent:#fff;--a-rgb:139,92,246;--a2-rgb:99,102,241;--accent:#a78bfa;--accent2:#c7d2fe;--bg:#080515;--surface:rgba(255,255,255,.035);--surface2:#151030;--border:rgba(167,139,250,.16);--muted:#b4abd0}
+  [data-style=glass] body{background:radial-gradient(900px 600px at 85% -5%,rgba(var(--a-rgb),.28),transparent 60%),radial-gradient(800px 600px at -5% 40%,rgba(var(--a2-rgb),.16),transparent 60%),radial-gradient(700px 500px at 90% 95%,rgba(var(--a-rgb),.14),transparent 60%),var(--bg);background-attachment:fixed}
+  [data-style=glass] body::before{opacity:.5}
+  [data-style=glass] nav{margin:14px 24px 0;left:0;right:0;border:1px solid var(--border);border-radius:999px;background:rgba(14,18,28,.62);padding:10px 24px;backdrop-filter:blur(18px)}
+  [data-style=glass] .nav-cta,[data-style=glass] .btn-primary,[data-style=glass] .btn-secondary,[data-style=glass] .pf-chip,[data-style=glass] .hero-tag,[data-style=glass] .photo-badge,[data-style=glass] .pf-search{border-radius:999px}
+  [data-style=glass] .btn-primary,[data-style=glass] .nav-cta:hover,[data-style=glass] .pf-chip.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--on-accent,#06121a)!important;border-color:transparent;box-shadow:0 8px 28px rgba(var(--a-rgb),.4)}
+  [data-style=glass] .btn-primary::before{display:none}
+  [data-style=glass] .nav-cta{padding:8px 20px!important}
+  [data-style=glass] .nav-links a[data-r]::after{display:none}
+  [data-style=glass] .nav-links a.active{color:var(--text);background:rgba(var(--a-rgb),.22);padding:6px 14px;border-radius:999px}
+  [data-style=glass] .nav-links a[data-r]{padding:6px 14px}
+  [data-style=glass] .skill-card,[data-style=glass] .project-card,[data-style=glass] .service-card,[data-style=glass] .tile,[data-style=glass] .contact-link,[data-style=glass] .oss-feat,[data-style=glass] .oss-card,[data-style=glass] .pager a,[data-style=glass] .about-fact,[data-style=glass] .freelance-hero,[data-style=glass] .freelance-cta-band,[data-style=glass] .pf-empty{border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--border);backdrop-filter:blur(10px)}
+  [data-style=glass] .skill-card{overflow:hidden}
+  [data-style=glass] .project-card:hover,[data-style=glass] .tile:hover,[data-style=glass] .skill-card:hover{border-color:rgba(var(--a-rgb),.5);box-shadow:0 14px 40px rgba(var(--a-rgb),.2)}
+  [data-style=glass] .exp-logo,[data-style=glass] .edu-logo-wrap,[data-style=glass] .proj-logo{border-radius:16px}
+  [data-style=glass] .skill-tag,[data-style=glass] .tech-chip,[data-style=glass] .service-tag,[data-style=glass] .exp-type{border-radius:999px}
+  [data-style=glass] #experience,[data-style=glass] #projects,[data-style=glass] #contact,[data-style=glass] #freelance{background:transparent}
+  [data-style=glass] .exp-item:hover,[data-style=glass] .edu-item:hover{border-radius:20px;background:rgba(var(--a-rgb),.07)}
+  [data-style=glass] .hero-photo-wrap{padding:14px;border-radius:32px;background:linear-gradient(160deg,rgba(var(--a-rgb),.55),rgba(var(--a2-rgb),.15) 60%,rgba(255,255,255,.04));border:1px solid rgba(var(--a-rgb),.35);box-shadow:0 30px 80px rgba(var(--a-rgb),.3)}
+  [data-style=glass] .hero-photo-wrap::before{display:none}
+  [data-style=glass] .hero-photo-wrap img{border-radius:22px;border:none!important}
+  [data-style=glass] .photo-badge{color:var(--on-accent,#06121a);background:linear-gradient(135deg,var(--accent),var(--accent2));right:-10px;bottom:-12px}
+  [data-style=glass] h1 span,[data-style=glass] .section-title{background:none}
+  [data-style=glass] h1 span{background:linear-gradient(120deg,var(--accent),var(--accent2),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  [data-style=glass] .stat-item{padding:14px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--border)}
+  [data-style=glass] .hero-stats{gap:14px}
+  [data-style=glass] footer{border-top:1px solid var(--border)}
   /* ===== modern pass ===== */
   body{font-weight:400;letter-spacing:-.005em}
   h1{letter-spacing:-.045em;line-height:.92}
@@ -1314,6 +1314,54 @@
   .pal-box li small{font:400 .68rem 'DM Mono',monospace;opacity:.7}
   .pal-box li.sel{background:rgba(var(--a-rgb),.2);color:var(--text)}
   .b .btn-primary span{color:#fff;font-size:.75rem}
+  /* ===== Signal: graphite + hi-vis lime, engineering style ===== */
+  [data-theme=signal]{--a-rgb:198,244,50;--a2-rgb:231,255,138;--accent:#c6f432;--accent2:#e7ff8a;--bg:#0a0c0d;--surface:#101315;--surface2:#171b1e;--border:rgba(255,255,255,.09);--muted:#9aa4a8;--text:#eef2f0}
+  [data-theme=signal] body{background:#0a0c0d}
+  [data-theme=signal] body::before{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse at 50% 0%,#000 30%,transparent 80%)}
+  [data-theme=signal] .hero-glow,[data-theme=signal] .hero-glow2{opacity:.35}
+  [data-theme=signal] nav{margin:14px 24px 0;border:1px solid var(--border);border-radius:14px;background:rgba(14,17,19,.78);padding:10px 20px;backdrop-filter:blur(16px)}
+  [data-theme=signal] .nav-links a[data-r]::after{display:none}
+  [data-theme=signal] .nav-links a.active{color:#0a0c0d;background:var(--accent);padding:6px 14px;border-radius:8px}
+  [data-theme=signal] .nav-links a[data-r]{padding:6px 14px;border-radius:8px}
+  [data-theme=signal] .nav-links a[data-r]:hover:not(.active){background:rgba(255,255,255,.06);color:var(--text)}
+  [data-theme=signal] .nav-cta{border-radius:8px;border:1px solid rgba(198,244,50,.5);color:var(--accent)!important}
+  [data-theme=signal] .nav-cta.active,[data-theme=signal] .nav-cta:hover{background:var(--accent);color:#0a0c0d!important}
+  [data-theme=signal] .btn-primary{background:var(--accent);color:#0a0c0d;border-radius:10px;font-weight:600}
+  [data-theme=signal] .btn-primary::before{background:var(--accent2)}
+  [data-theme=signal] .btn-primary span,[data-theme=signal] .b .btn-primary span{color:#0a0c0d}
+  [data-theme=signal] .btn-secondary,[data-theme=signal] .pf-chip,[data-theme=signal] .pf-search,[data-theme=signal] .kbtn{border-radius:10px}
+  [data-theme=signal] .pf-chip.active{background:var(--accent);color:#0a0c0d;border-color:var(--accent)}
+  [data-theme=signal] .hero-tag{border-radius:8px;color:var(--accent);border-color:rgba(198,244,50,.35)}
+  [data-theme=signal] h1 span{color:var(--accent)}
+  [data-theme=signal] .skill-card,[data-theme=signal] .project-card,[data-theme=signal] .service-card,[data-theme=signal] .tile,[data-theme=signal] .contact-link,[data-theme=signal] .oss-feat,[data-theme=signal] .oss-card,[data-theme=signal] .pager a,[data-theme=signal] .about-fact,[data-theme=signal] .b,[data-theme=signal] .stat-item,[data-theme=signal] .freelance-hero,[data-theme=signal] .freelance-cta-band{border-radius:14px;background:var(--surface);border:1px solid var(--border)}
+  [data-theme=signal] .stat-item{padding:14px 20px}
+  [data-theme=signal] .hero-stats{gap:12px}
+  [data-theme=signal] .project-card:hover,[data-theme=signal] .tile:hover,[data-theme=signal] .skill-card:hover,[data-theme=signal] .b:hover{border-color:rgba(198,244,50,.45)}
+  [data-theme=signal] .b-now{background:linear-gradient(160deg,rgba(198,244,50,.12),var(--surface) 55%)}
+  [data-theme=signal] .b-open{background:var(--accent);border-color:var(--accent)}
+  [data-theme=signal] .b-open p,[data-theme=signal] .b-open .b-k{color:#0a0c0d!important}
+  [data-theme=signal] .b-open .btn-primary{background:#0a0c0d}
+  [data-theme=signal] .b-open .btn-primary span{color:var(--accent)}
+  [data-theme=signal] .big{background:none;color:var(--accent);-webkit-text-fill-color:var(--accent)}
+  [data-theme=signal] .skill-card::before{background:var(--accent)!important;height:2px}
+  [data-theme=signal] .exp-logo,[data-theme=signal] .edu-logo-wrap,[data-theme=signal] .proj-logo{border-radius:10px}
+  [data-theme=signal] .skill-tag,[data-theme=signal] .tech-chip,[data-theme=signal] .service-tag,[data-theme=signal] .exp-type,[data-theme=signal] .chips span{border-radius:6px}
+  [data-theme=signal] .hero-photo-wrap{padding:0;border-radius:18px;background:none;border:1px solid var(--border);box-shadow:none}
+  [data-theme=signal] .hero-photo-wrap::before{display:block;border:1px solid rgba(198,244,50,.45);border-radius:22px;inset:-10px;animation:none}
+  [data-theme=signal] .hero-photo-wrap img{border-radius:18px;border:none!important;filter:grayscale(25%) contrast(1.05)!important}
+  [data-theme=signal] .photo-badge{background:var(--accent);color:#0a0c0d;border-radius:8px;font-weight:600}
+  [data-theme=signal] #experience,[data-theme=signal] #projects,[data-theme=signal] #contact,[data-theme=signal] #freelance{background:transparent}
+  [data-theme=signal] .about-band,[data-theme=signal] .ticker-item{color:var(--muted)}
+  [data-theme=signal] .exp-item:hover,[data-theme=signal] .edu-item:hover{background:rgba(198,244,50,.03)}
+  [data-theme=signal] .pal-box{background:#101315}
+
+  [data-theme=ocean]{--bg:#050a10;--on-accent:#04141a}
+  .tbtn{order:3;width:34px;height:34px;border-radius:50%;border:1px solid var(--border);background:rgba(255,255,255,.05);cursor:pointer;display:grid;place-items:center;padding:0}
+  .tbtn i{width:14px;height:14px;border-radius:50%;background:conic-gradient(var(--accent),var(--accent2),var(--accent))}
+  .tbtn:hover{border-color:rgba(var(--a-rgb),.6)}
+  .themes{position:absolute;right:20px;top:calc(100% + 10px);order:0;margin:0;gap:10px;padding:12px 14px;background:rgba(14,18,28,.95);border:1px solid var(--border);border-radius:14px;backdrop-filter:blur(14px);z-index:200}
+  .themes[hidden]{display:none}
+  .themes button{width:20px;height:20px}
 </style>
 </head>
 <body>
@@ -1321,7 +1369,8 @@
 <div class="cursor-ring" id="cursorRing"></div>
 <nav>
   <button class="kbtn" id="kbtn" type="button">Search <kbd>Ctrl K</kbd></button>
-  <div class="themes" id="themes" aria-label="Colour theme"><button data-t="ember" style="--c:#f97316" title="Ember"></button><button data-t="ocean" style="--c:#22d3ee" title="Ocean"></button><button data-t="violet" style="--c:#a78bfa" title="Violet"></button><button data-t="forest" style="--c:#34d399" title="Forest"></button><button data-t="rose" style="--c:#fb7185" title="Rose"></button></div>
+  <button class="tbtn" id="tbtn" type="button" aria-label="Change theme" title="Theme"><i></i></button>
+  <div class="themes" id="themes" hidden aria-label="Colour theme"><button data-t="signal" style="--c:#c6f432" title="Signal"></button><button data-t="nebula" style="--c:#8b5cf6" title="Nebula"></button><button data-t="ember" style="--c:#f97316" title="Ember"></button><button data-t="ocean" style="--c:#22d3ee" title="Ocean"></button><button data-t="violet" style="--c:#a78bfa" title="Violet"></button><button data-t="forest" style="--c:#34d399" title="Forest"></button><button data-t="rose" style="--c:#fb7185" title="Rose"></button></div>
   <a class="nav-logo" href="#/home">RG<span style="color:var(--muted)">.</span></a>
   <ul class="nav-links">
     <li><a href="#/home" data-r="home">Home</a></li>
@@ -2531,8 +2580,8 @@
   // ===== theme =====
   (function(){
     const root=document.documentElement,btns=[...document.querySelectorAll('#themes button')];
-    function set(t){root.dataset.theme=t;btns.forEach(b=>b.classList.toggle('on',b.dataset.t===t));try{localStorage.setItem('rg-theme',t)}catch(e){}}
-    let t='nebula';try{t=localStorage.getItem('rg-theme')||'nebula'}catch(e){}
+    function set(t){root.dataset.theme=t;root.dataset.style=(t==='signal')?'sharp':'glass';btns.forEach(b=>b.classList.toggle('on',b.dataset.t===t));try{localStorage.setItem('rg-theme',t)}catch(e){}}
+    let t='ocean';try{t=localStorage.getItem('rg-theme')||'ocean'}catch(e){}
     btns.forEach(b=>b.addEventListener('click',()=>set(b.dataset.t)));set(t);
   })();
   // ===== spotlight =====
@@ -2563,6 +2612,11 @@
       if(e.key==='ArrowUp'){sel=Math.max(0,sel-1);render();e.preventDefault();}
       if(e.key==='Enter')go(list[sel]);
     },true);
+  })();
+  (function(){const tb=document.getElementById('tbtn'),th=document.getElementById('themes');
+    tb.addEventListener('click',e=>{e.stopPropagation();th.hidden=!th.hidden;});
+    document.addEventListener('click',e=>{if(!th.contains(e.target))th.hidden=true;});
+    th.addEventListener('click',()=>{setTimeout(()=>th.hidden=true,150);});
   })();
 
 </script>
