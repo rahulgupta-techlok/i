@@ -1442,6 +1442,15 @@
   @media(min-width:769px){
     #hero .hero-content{max-width:1040px;grid-template-columns:minmax(0,1fr) clamp(250px,24vw,300px);gap:clamp(40px,6vw,90px)}
   }
+
+  /* smaller hero photo */
+  @media(min-width:769px){
+    #hero .hero-content{grid-template-columns:minmax(0,1fr) clamp(220px,20vw,250px)}
+    #hero .hero-photo{height:clamp(260px,46vh,380px)!important}
+  }
+  @media(min-width:769px) and (max-height:820px){
+    #hero .hero-photo{height:clamp(220px,46vh,360px)!important}
+  }
 </style>
 </head>
 <body>
@@ -1524,7 +1533,7 @@
  <div class="b b-m"><b class="big">80%</b><span>lower API latency with Redis caching in Shape</span></div>
  <div class="b b-stack"><span class="b-k">Core stack</span><div class="chips"><span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>React</span><span>MLflow</span><span>Databricks</span><span>Docker</span><span>Kubernetes</span><span>SQL</span></div></div>
  <div class="b b-m"><b class="big">40%</b><span>better context relevance with hybrid retrieval</span></div>
- <div class="b b-m"><b class="big">40%</b><span>faster report refresh, Power BI to Databricks</span></div>
+ <div class="b b-m"><b class="big">4%</b><span>optimality gap, Gurobi factory layout planning at Schaeffler</span></div>
  <div class="b b-open"><span class="b-k"><i class="dot"></i> Open to work</span><p>Germany, EU and worldwide. Full-time roles and projects.</p><a class="btn-primary" href="#/contact"><span>Let's talk</span></a></div>
 </div></div></section>
 <!-- Ticker band -->
@@ -1569,9 +1578,9 @@
         <div class="about-lead">Engineer by training.<br><span>Data &amp; AI</span> by calling.</div>
         <div class="about-body">
           <p>AI Engineer and Data Scientist with a strong foundation in software engineering and data engineering, bringing 5+ years of experience in full-stack development, data pipelines, production AI, machine learning, and data systems across startups and large enterprises in Germany and India.</p>
-          <p>At <strong>Bosch</strong> I work on product development and solution engineering for remote device management in industrial IoT, connecting edge devices to cloud platforms, and on industrial AI: predictive maintenance, multivariate time-series analysis and computer vision, delivered through MLflow-based MLOps and scalable ML pipelines.</p>
+          <p>At <strong>Bosch</strong> I built a cloud agnostic device management platform for industrial IoT (AWS IoT Core, Azure IoT Hub, MQTT, Terraform) and work on industrial AI: computer vision, predictive maintenance and anomaly detection, delivered through MLflow-based MLOps.</p>
           <p>At <strong>FIR e.V. at RWTH Aachen</strong> I built agentic AI and RAG systems for decision support with LangGraph, MCP and tool calling. Hybrid retrieval lifted context relevance by <strong>40%</strong>, guardrails stop unsupported claims, and an evaluation framework tracks quality, latency and cost. I also engineered Shape, an object-centric process-mining platform (FastAPI, React, Docker), where caching cut API latency by <strong>80%</strong>.</p>
-          <p>At <strong>ZEISS SMT</strong> I moved production reporting to Databricks (<strong>40% faster refresh</strong>), built a scheduling optimizer and an LLM analytics agent that answers KPI questions in plain language (RAG, NL-to-SQL). Before Germany, 4 years at <strong>Cognizant</strong> shipping data pipelines, ML features and CI/CD for enterprise software.</p>
+          <p>At <strong>ZEISS SMT</strong> I migrated Power BI reports to the cloud and ran the Scheduling dashboards with Power Query and DAX. Before Germany, 4 years at <strong>Cognizant</strong> shipping data pipelines, ML features and CI/CD for enterprise software.</p>
           <p>What I bring:</p>
           <ul style="margin: 0.5rem 0 0.5rem 1.2rem; line-height: 2;">
             <li><strong>AI &amp; Machine Learning</strong>: deep learning, computer vision, time series, NLP</li>
@@ -1670,8 +1679,8 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Ludwigsburg, Germany</span>
           </div>
-          <p class="exp-summary">Product development and solution engineering for remote device management in industrial IoT, connecting edge devices to AWS and Azure, plus industrial AI: computer vision for conveyor-belt intrusion detection (<strong>91% precision in production</strong>), predictive maintenance and multivariate time-series anomaly detection with MLflow.</p>
-          <ul class="exp-bullets exp-more"><li>Remote device management for industrial IoT: edge devices connected to AWS and Azure</li><li>Computer vision for conveyor-belt intrusion detection, 91% precision in production</li><li>Predictive maintenance and multivariate time-series anomaly detection, tracked in MLflow</li><li>Scalable ML pipelines and MLflow-based MLOps</li></ul>
+          <p class="exp-summary">Built a cloud agnostic device management platform for industrial IoT (discovery, onboarding, remote access and telemetry across AWS and Azure), plus industrial AI: computer vision for conveyor-belt intrusion detection (<strong>91% precision in production</strong>) and predictive maintenance with MLflow.</p>
+          <ul class="exp-bullets exp-more"><li>Cloud agnostic device management platform: discovery, onboarding, remote access and telemetry across AWS and Azure (AWS IoT Core, Azure IoT Hub, MQTT, SSH, Tailscale, Terraform)</li><li>Computer vision for conveyor-belt intrusion detection (RT-DETR, PyTorch), 91% precision in production</li><li>Predictive maintenance and PCA/FFT anomaly detection on multivariate time series, tracked in MLflow</li><li>Azure DevOps CI/CD, model deployment and MLflow-based MLOps</li></ul>
           <button class="exp-toggle" type="button">Show details +</button>
         </div>
       </div>
@@ -1698,7 +1707,7 @@
       <div class="exp-item">
         <div class="exp-logo"><img src="data:image/png;base64,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" alt="ZEISS SMT"></div>
         <div class="exp-content">
-          <div class="exp-role">Data & AI Engineer <span class="exp-type intern">Internship</span></div>
+          <div class="exp-role">Analyst Intern (Power BI &amp; Data Analytics) <span class="exp-type intern">Internship</span></div>
           <div class="exp-meta-row">
             <span class="exp-company">ZEISS Group · ZEISS SMT</span>
             <span class="exp-dot">·</span>
@@ -1706,8 +1715,8 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Oberkochen, Germany</span>
           </div>
-          <p class="exp-summary">Moved production reporting from Power BI to Databricks (<strong>40% faster refresh</strong>), built a scheduling optimizer and an LLM agent for querying production KPIs in natural language.</p>
-          <ul class="exp-bullets exp-more"><li>Moved production reporting from Power BI to Databricks, 40% faster refresh</li><li>Built a scheduling optimizer for production planning</li><li>LLM analytics agent that answers KPI questions in plain language (RAG, NL-to-SQL)</li><li>Celonis process mining on scheduling bottlenecks</li></ul>
+          <p class="exp-summary">Migrated legacy Power BI reports from Report Server to a cloud based platform, and managed the Scheduling department dashboards with Power Query and DAX.</p>
+          <ul class="exp-bullets exp-more"><li>Migrated legacy Power BI reports from Report Server to a cloud based platform, improving reliability and cutting manual maintenance effort</li><li>Managed Power BI dashboards for the Scheduling department, using Power Query for data preparation and DAX for calculations</li><li>Trained colleagues on Power BI and data interpretation, and kept reports accurate and clear</li></ul>
           <button class="exp-toggle" type="button">Show details +</button>
         </div>
       </div>
@@ -1724,8 +1733,8 @@
             <span class="exp-dot">·</span>
             <span class="exp-location">Düsseldorf, Germany</span>
           </div>
-          <p class="exp-summary">Improved client ETL pipelines (<strong>30% faster</strong>) and built Power BI dashboards for consulting analytics.</p>
-          <ul class="exp-bullets exp-more"><li>Improved client ETL pipelines, 30% faster</li><li>Built Power BI dashboards for consulting analytics</li></ul>
+          <p class="exp-summary">Consolidated transactional and master data into one Power BI model with DAX measures and row level security for customer assortment analysis.</p>
+          <ul class="exp-bullets exp-more"><li>Consolidated transactional and master data into one Power BI model with DAX measures and row level security for customer assortment analysis</li><li>Moved the model into Power BI Dataflows and delivered client requirements independently</li></ul>
           <button class="exp-toggle" type="button">Show details +</button>
         </div>
       </div>
@@ -1863,50 +1872,48 @@
         </div>
       </div>
 
-      <div class="project-card" data-cat="ai" >
-        <div class="proj-logo pl-zeiss" role="img" aria-label="ZEISS"></div>
+      <div class="project-card" data-cat="sw" >
+        <div class="proj-logo pl-bosch" role="img" aria-label="Bosch"></div>
         <div class="project-num">PRJ - 005</div>
-        <div class="project-title">Conversational Analytics Agent for Production KPIs</div>
-        <div class="project-period">07/2025 - 12/2025 · ZEISS Group</div>
-        <div class="project-desc">Designed an LLM-driven conversational agent to query and interpret scheduling KPIs and production planning data in natural language, reducing reliance on manual BI report generation and enabling faster planning decisions.</div>
+        <div class="project-title">Cloud Agnostic Device Management Platform</div>
+        <div class="project-period">03/2026 - Present · Bosch</div>
+        <div class="project-desc">Built an end to end device management platform for industrial IoT: device discovery, onboarding, remote access and telemetry across AWS and Azure. Uses AWS IoT Core, Azure IoT Hub, MQTT, SSH and Tailscale, with infrastructure provisioned in Terraform.</div>
         <div class="project-techs">
-          <span class="tech-chip">LLMs</span>
-          <span class="tech-chip">Agentic AI</span>
-          <span class="tech-chip">SAP</span>
-          <span class="tech-chip">Power BI</span>
-          <span class="tech-chip">Databricks</span>
+          <span class="tech-chip">AWS IoT Core</span>
+          <span class="tech-chip">Azure IoT Hub</span>
+          <span class="tech-chip">MQTT</span>
+          <span class="tech-chip">Terraform</span>
+          <span class="tech-chip">Tailscale</span>
+          <span class="tech-chip">FastAPI</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="ml" >
+        <div class="proj-logo pl-rwth" role="img" aria-label="RWTH Aachen"></div>
+        <div class="project-num">PRJ - 006</div>
+        <div class="project-title">Predictive World Model for Autonomous Driving</div>
+        <div class="project-period">2026 · Independent project (GitHub)</div>
+        <div class="project-desc">Trajectory forecasting with LSTM and Transformer models, candidate action risk assessment and a rule based safety fallback, with a tested codebase. Closed loop CARLA experiments and a full quantitative evaluation are still in progress.</div>
+        <div class="project-techs">
+          <span class="tech-chip">PyTorch</span>
+          <span class="tech-chip">LSTM</span>
+          <span class="tech-chip">Transformer</span>
+          <span class="tech-chip">Autonomous Driving</span>
           <span class="tech-chip">Python</span>
         </div>
       </div>
 
       <div class="project-card" data-cat="data" >
         <div class="proj-logo pl-zeiss" role="img" aria-label="ZEISS"></div>
-        <div class="project-num">PRJ - 006</div>
-        <div class="project-title">Celonis Process Mining - Scheduling Bottleneck Analysis</div>
-        <div class="project-period">07/2025 - 12/2025 · ZEISS Group</div>
-        <div class="project-desc">Analyzed end-to-end production scheduling workflows using Celonis process mining. Identified critical bottlenecks, deviations from planned processes, and rework loops - delivering actionable improvement recommendations that influenced planning decisions.</div>
-        <div class="project-techs">
-          <span class="tech-chip">Celonis</span>
-          <span class="tech-chip">Process Mining</span>
-          <span class="tech-chip">EMS</span>
-          <span class="tech-chip">SAP</span>
-          <span class="tech-chip">Data Analytics</span>
-        </div>
-      </div>
-
-      <div class="project-card" data-cat="data" >
-        <div class="proj-logo pl-zeiss" role="img" aria-label="ZEISS"></div>
         <div class="project-num">PRJ - 007</div>
-        <div class="project-title">Power BI to Databricks Migration</div>
-        <div class="project-period">07/2025 - 12/2025 · ZEISS Group</div>
-        <div class="project-desc">Led full migration of legacy Power BI reports to Databricks, redesigning data models for scalability and performance. Implemented production-grade pipelines and real-time dashboards using SAP scheduling data for planning teams.</div>
+        <div class="project-title">Power BI Report Migration and Dashboard Maintenance</div>
+        <div class="project-period">07/2025 - 12/2025 · ZEISS SMT</div>
+        <div class="project-desc">Migrated legacy Power BI reports from Report Server to a cloud based platform and maintained the Scheduling department dashboards with Power Query and DAX. Trained colleagues on Power BI usage and data interpretation.</div>
         <div class="project-techs">
-          <span class="tech-chip">Databricks</span>
           <span class="tech-chip">Power BI</span>
-          <span class="tech-chip">PySpark</span>
-          <span class="tech-chip">SAP</span>
-          <span class="tech-chip">Azure</span>
-          <span class="tech-chip">ETL</span>
+          <span class="tech-chip">Power Query</span>
+          <span class="tech-chip">DAX</span>
+          <span class="tech-chip">Data Analytics</span>
         </div>
       </div>
 
@@ -2214,8 +2221,14 @@
         <div class="skill-card-title">Cloud & DevOps</div>
         <div class="skill-tags">
           <span class="skill-tag">Azure</span>
+          <span class="skill-tag">AWS IoT Core</span>
+          <span class="skill-tag">Azure IoT Hub</span>
           <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">Tailscale</span>
           <span class="skill-tag">MLOps</span>
+          <span class="skill-tag">Model Deployment</span>
+          <span class="skill-tag">Azure DevOps CI/CD</span>
           <span class="skill-tag">Jenkins CI/CD</span>
           <span class="skill-tag">GitLab CI/CD</span>
           <span class="skill-tag">Git</span>
