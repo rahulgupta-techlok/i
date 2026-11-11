@@ -1437,6 +1437,11 @@
   html,body,*{cursor:auto!important}
   a,button,summary,[role=button],.pf-chip,.nav-cta,.btn-primary,.btn-secondary,select,label{cursor:pointer!important}
   input,textarea{cursor:text!important}
+
+  /* tighter hero: photo sits closer to the text, composition centred */
+  @media(min-width:769px){
+    #hero .hero-content{max-width:1040px;grid-template-columns:minmax(0,1fr) clamp(250px,24vw,300px);gap:clamp(40px,6vw,90px)}
+  }
 </style>
 </head>
 <body>
