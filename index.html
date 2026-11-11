@@ -1372,11 +1372,32 @@
   .hero-role i{font-style:normal;color:var(--accent);margin:0 6px}
   .rotator{margin-top:10px}
   .hero-role small{display:block;font:400 .72rem 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  /* ===== ocean name + 3D grid ===== */
+  [data-style=glass] h1 span,[data-theme=ocean] h1 span{background:linear-gradient(100deg,#0ea5e9 0%,#38bdf8 28%,#22d3ee 55%,#2dd4bf 80%,#38bdf8 100%)!important;background-size:220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;animation:shimmer 7s ease-in-out infinite}
+  [data-theme=nebula] h1 span{background:linear-gradient(100deg,#8b5cf6,#a78bfa 40%,#c4b5fd 70%,#8b5cf6)!important;background-size:220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;animation:shimmer 7s ease-in-out infinite}
+  [data-theme=forest] h1 span{background:linear-gradient(100deg,#10b981,#34d399 40%,#6ee7b7 70%,#10b981)!important;background-size:220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;animation:shimmer 7s ease-in-out infinite}
+  @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  body::before{display:none}
+  .grid3d,.grid3d-top{position:fixed;left:0;right:0;pointer-events:none;z-index:0;overflow:hidden;perspective:520px}
+  .grid3d{bottom:0;height:62vh;-webkit-mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%);mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.55) 45%,transparent 100%)}
+  .grid3d-top{top:0;height:38vh;opacity:.55;-webkit-mask-image:linear-gradient(to bottom,#000 0%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,transparent 100%)}
+  .grid3d i,.grid3d-top i{position:absolute;left:-60%;width:220%;height:260%;background-image:linear-gradient(rgba(var(--a-rgb),.42) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--a-rgb),.42) 1px,transparent 1px);background-size:72px 72px;will-change:transform,background-position}
+  .grid3d i{bottom:-30%;transform-origin:50% 100%;transform:rotateX(68deg) translateX(var(--gx,0px));animation:floorMove 5s linear infinite}
+  .grid3d-top i{top:-30%;transform-origin:50% 0;transform:rotateX(-68deg) translateX(var(--gx,0px));animation:floorMove 5s linear infinite reverse}
+  @keyframes floorMove{from{background-position:0 0,0 0}to{background-position:0 72px,0 0}}
+  .tilt{transform-style:preserve-3d;transition:transform .15s ease-out,border-color .3s,box-shadow .3s}
+  @media (prefers-reduced-motion:reduce){.grid3d i,.grid3d-top i,h1 span{animation:none!important}}
+  @media (max-width:700px){.grid3d{height:45vh}.grid3d-top{display:none}}
+
+  html[data-theme] h1 span,html[data-style] h1 span{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;-webkit-text-fill-color:var(--accent)!important;color:var(--accent)!important;animation:none!important;text-shadow:0 0 28px rgba(var(--a-rgb),.35)}
+
+  html[data-theme=ocean] h1 span{-webkit-text-fill-color:#2dd4bf!important;color:#2dd4bf!important;text-shadow:0 0 28px rgba(45,212,191,.35)}
 </style>
 </head>
 <body>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
+<div class="grid3d" aria-hidden="true"><i></i></div><div class="grid3d-top" aria-hidden="true"><i></i></div>
 <nav>
   <button class="kbtn" id="kbtn" type="button">Search <kbd>Ctrl K</kbd></button>
   <button class="tbtn" id="tbtn" type="button" aria-label="Change theme" title="Theme"><i></i></button>
@@ -1449,7 +1470,6 @@
 
 <section id="bento" class="page"><div class="section-inner" style="padding-top:30px;padding-bottom:40px">
 <div class="bento">
- <div class="b b-now"><span class="b-k"><i class="dot"></i> Now &middot; Working student at Bosch</span><h3>Data Scientist (ML &amp; Solution Engineering)</h3><p>In Ludwigsburg: remote device management for industrial IoT, plus computer vision and predictive maintenance for factories.</p><div class="chips"><span>Industrial IoT</span><span>MLflow</span><span>AWS &amp; Azure</span><span>Computer Vision</span></div></div>
  <div class="b b-m"><b class="big">91%</b><span>precision in production, conveyor-belt intrusion detection</span></div>
  <div class="b b-m"><b class="big">80%</b><span>lower API latency with Redis caching in Shape</span></div>
  <div class="b b-stack"><span class="b-k">Core stack</span><div class="chips"><span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>React</span><span>MLflow</span><span>Databricks</span><span>Docker</span><span>Kubernetes</span><span>SQL</span></div></div>
@@ -2628,6 +2648,21 @@
     tb.addEventListener('click',e=>{e.stopPropagation();th.hidden=!th.hidden;});
     document.addEventListener('click',e=>{if(!th.contains(e.target))th.hidden=true;});
     th.addEventListener('click',()=>{setTimeout(()=>th.hidden=true,150);});
+  })();
+  // ===== 3D grid parallax + card tilt =====
+  (function(){
+    const root=document.documentElement;
+    document.addEventListener('mousemove',e=>{
+      const x=(e.clientX/innerWidth-.5);
+      root.style.setProperty('--gx',(x*-90)+'px');
+      const c=e.target.closest&&e.target.closest('.b,.tile,.skill-card,.service-card,.project-card,.contact-link,.about-fact');
+      document.querySelectorAll('.tilting').forEach(el=>{if(el!==c){el.style.transform='';el.classList.remove('tilting');}});
+      if(!c)return;
+      const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+      c.classList.add('tilt','tilting');
+      c.style.transform='perspective(900px) rotateX('+(-py*6).toFixed(2)+'deg) rotateY('+(px*7).toFixed(2)+'deg) translateY(-3px)';
+    },{passive:true});
+    document.addEventListener('mouseleave',()=>document.querySelectorAll('.tilting').forEach(el=>{el.style.transform='';el.classList.remove('tilting');}));
   })();
 
 </script>
